@@ -1,0 +1,71 @@
+{
+  "name": "service-products-collection",
+  "vendor": "vendor",
+  "version": "0.0.0",
+  "title": "Gift Bag",
+  "description": "Reference app for VTEX IO Services",
+  "mustUpdateAt": "2023-13-09",
+  "categories": [],
+  "dependencies": {},
+  "builders": {
+    "node": "6.x",
+    "docs": "0.x"
+  },
+  "billingOptions": {
+    "free": true,
+    "termsURL": "",
+    "support": {
+      "url": "",
+      "email": "",
+      "phone": ""
+    },
+    "availableCountries": [
+      "*"
+    ]
+  },
+  "credentialType": "absolute",
+  "policies": [
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "httpstat.us",
+        "path": "*"
+      }
+    },
+    {
+      "name": "outbound-access",
+      "attrs": {
+        "host": "portal.vtexcommercestable.com.br",
+        "path": "/api/*"
+      }
+    },
+    {
+      "name": "colossus-fire-event"
+    },
+    {
+      "name": "colossus-write-logs"
+    }
+  ],
+  "settingsSchema": {
+    "title": "Service Collection",
+    "type": "object",
+    "properties": {
+      "collectionId": {
+        "title": "Collection Id",
+        "description": "This is the ID of the Collection Gift Bag",
+        "type": "string"
+      },
+      "sectionSliderGiftBag": {
+        "title": "ID Slider Gift Bag",
+        "description": "This is the ID of the Slider Gift Bag",
+        "type": "string"
+      },
+      "titleSliderGiftBag": {
+        "title": "Title Slider Gift Bag",
+        "description": "This is the title of the Slider Gift Bag",
+        "type": "string"
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}
